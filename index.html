@@ -5,5 +5,15 @@
 </head>
 <body>
 	Hello, I'm Xianglong Zhao!
+	<div>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<div id="content"></div>
+		<script>
+			$.get('https://github.com/akai100/Hello-Rust/blob/main/Rust%20%E4%BB%8B%E7%BB%8D.md', function(response, status, xhr){
+				$("#content").html(marked(response));
+			});
+		</script>
+	</div>
 </body>
 </html>
